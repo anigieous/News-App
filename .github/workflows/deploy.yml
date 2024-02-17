@@ -25,10 +25,12 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.name "Anigieous"
-        git config --global user.email "akak3016@gmail.com"
+        git config --local user.name "Anigieous"
+        git config --local user.email "akak3016@gmail.com"
 
-    - name: Depoy
+    - name: Deploy
       run: |
         npm run deploy
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
