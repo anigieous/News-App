@@ -8,28 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    
-    - name: Install Dependencies
-      run: |
-        npm install
-
-    - name: Test the App
-      run: |
-        npm test
-
-    - name: BuildGeneration
-      run: |
-        npm run build
-
-    - name: Configure Git
-      run: |
-        git config --local user.name "Anigieous"
-        git config --local user.email "akak3016@gmail.com"
-
-    - name: Deploy
-      run: |
-        npm run deploy --token=${{ secrets.AKASH_TOKEN }}
-
-
+    - name: Build and Deploy
+      uses: anigieous/Deploy-Static-Website-to-GH-PAges/tree/main/Dynamic@main
+      with:
+        username: anigieous
+        email: akak3016@gmail.com
+        GITHUB_TOKEN: ${{ secrets.AKASH_TOKEN }}
