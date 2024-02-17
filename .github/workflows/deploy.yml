@@ -1,0 +1,25 @@
+name: Deploy to GH Pages
+on: 
+  push:
+  workflow_dispatch:
+
+jobs:
+  DepolyToGHPages:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Install Dependencies
+      run: |
+        npm install
+
+    - name: Test the App
+      run: |
+        npm test
+
+    - name: BuildGeneration
+      run: |
+        npm run build
+
