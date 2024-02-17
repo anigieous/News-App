@@ -1,6 +1,6 @@
 {
   "name": "newsapp",
-  "homepage": "<https://anigieous.github.io/News-App>",
+  "homepage": "https://anigieous.github.io/News-App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
