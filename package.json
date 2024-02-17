@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -t -r https://${GH_TOKEN}@github.com/anigieous/News-App.git"
+    "deploy": "gh-pages -d build -t -r https://$npm_config_token@github.com/anigieous/News-App.git"
+
 
   },
   "eslintConfig": {
