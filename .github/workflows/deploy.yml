@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Build and Deploy
-      uses: anigieous/Deploy-Static-Website-to-GH-PAges/tree/main/Dynamic@main
+      uses: anigieous/Deploy-Static-Website-to-GH-PAges/blob/main/Dynamic@main
       with:
         username: anigieous
         email: akak3016@gmail.com
